@@ -1,0 +1,37 @@
+Orden de creacion de clases para el proyecto
+
+Leer el codigo en el siguiente orden 
+
+1. Product
+2. Magazine
+3. Book
+4. Item
+5. Chart
+6. App
+
+
+1. Product 
+Clase Padre abstracta que da algunos campos compartidos por ambas clases hijas (Book, Magazine)
+Tambien se definen algunos metodos, que luego se implementan en las clases hijas
+
+2-3. Magazine y Book 
+- Agregado de miembros faltantes
+- Agregado de metodos accesores (Getters y Setters) 
+- Implementacion de los precios en formato digital y fisico
+- Metodo que permite detallar descripcion de los objetos creados.
+
+4.Item
+- Calcula precios a partir de un articulo, una cantidad de articulos del mismo tipo, y su formato de venta
+- Tambien muestra una descripcion del articulo con su precio unitario y precio acumulado
+
+5.Chart
+- Carrito que me permite agrupar los items dentro de un ArrayList.
+- Tiene un metodo showItems que permite ver todos los articulos en el carrito
+- 
+
+6.App
+- Se crean todos los productos que se quieren agregar al carrito
+- Se utilizan los productos para generar items (Que dan el precio por unidad, cantidad y formato) 
+- Se agregan los items al carrito
+- Muestra los resultados
+
