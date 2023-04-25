@@ -65,16 +65,22 @@ public class Book extends Product {
         this.codigo = codigo;
     }   
 
-    
+    public double getPrecioCompra(){
+        return this.precioCompra;
+    }
+
+    public void setPrecioCompra(double precioCompra){
+        this.precioCompra = precioCompra;
+    }
     //Sobreescritura de metodos de la clase padre (Product)
     @Override
     public double getPrecioDigital(){
-        return this.precioCompra * 1.08;
+        return getPrecioCompra() * 1.08;
     }
 
     @Override
     public double getPrecioFisico(){
-        return this.precioCompra * 1.18; 
+        return getPrecioCompra() * 1.18; 
     }
     
     @Override
@@ -84,5 +90,9 @@ public class Book extends Product {
         System.out.println("fecha de publicacion: " + this.getFechaPublicacion());
         System.out.println("Editorial: " + this.getEditorial());
         System.out.println("Codigo: " + this.getCodigo());
+    }
+
+    public void setFechaPublicacion(LocalDate fechaPublicacion) {
+        this.fechaPublicacion = fechaPublicacion;
     }
 }
