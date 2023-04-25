@@ -4,18 +4,26 @@ import java.util.ArrayList;
 
 public class Chart {
     //Collection para agregar productos
-    ArrayList<Item> productos = new ArrayList<Item>();
+    private ArrayList<Item> productos;
 
     //Constructor por default
-    public Chart() {}; 
+    public Chart() {
+        this.productos = new ArrayList<Item>();
+    }; 
 
-    //Plantear Constructor con parametros? 
+
 
 
     //METODOS
     //Agregar producto al carrito
     public void addItem(Item p){
         this.productos.add(p); 
+    }
+
+    //Devolver Carrito
+
+    public ArrayList<Item> getChart(){
+        return this.productos; 
     }
 
     //Mostrar los items del carrito
@@ -28,6 +36,18 @@ public class Chart {
         }
         System.out.println("\n"); //salto de linea
         System.out.println("Total: " + getTotalPrice());
+    }
+
+    //Eliminar item del carrito
+    public void removeItem(Item item){
+        if (getChart().contains(item)){
+            this.productos.remove(item);
+        }
+    }
+
+    //Eliminar todo el carrito
+    public void removeChart(){
+        this.productos = new ArrayList<Item>();
     }
 
     //Precio total del carrito
